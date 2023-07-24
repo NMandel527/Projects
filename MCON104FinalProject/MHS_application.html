@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Application form</title>
+    <link href = "MHS%20Website%20CSS/MHSWebsite.css" rel = "stylesheet"/>
+    <link href = "MHS%20Website%20CSS/date.css" rel = "stylesheet" />
+    <link href= "MHS%20Website%20CSS/MHS_application.css" rel = "stylesheet"/>
+    <link rel="shortcut icon" href="MHS%20Website%20Images/MHS%20Logo%20-%20MCON104.png"/>
+    <script src = "MHS%20Website%20JS/MHSWebsite.js" defer></script>
+</head>
+
+<body id="noPics">
+    <img src = "MHS%20Website%20Images/MHS%20Logo2%20-%20MCON104%20-%20Copy.png" alt = "MHS Logo" id = "logo">
+
+    <nav>
+      <ul>
+        <li><a href = "MHS_home.html">Home</a></li>
+        <li><a href = "MHS_about.html">About MHS</a></li>
+        <li><a href = "MHS_schedule.html">Sample MHS Schedule</a></li>
+        <li><a href = "MHS_application.html">Apply to MHS</a></li>
+      </ul>
+    </nav>
+
+    <div id = "new">
+        <div>Today's Date and Time</div>
+        <div id="dateNow">12/28/2022 8:52:12 p.m.</div>
+    </div>
+
+    <p id="date">New School Year Starts on September 5th 2023</p>
+    <div id="countdown">
+            <div><span id="days">53</span><br />Days</div>
+            <div><span id="hrs">9</span><br />Hours</div>
+            <div><span id="mins">14</span><br />Minutes</div>
+            <div><span id="secs">48</span><br />Seconds</div>
+    </div>
+
+       <form id="survey" action="example.com" method="post">
+         <fieldset id="mhsapp">
+            <legend>Applicant Information</legend>
+
+            <div class="formRow">
+               <label>Name: &nbsp</label>
+               <input name="appName" type="text" placeholder="First Name" required/>
+               <input name="appName" type="text" placeholder="Middle Name"/>
+               <input name="appName" type="text" placeholder="Last Name" required/>
+            </div>
+
+            <div class="formRow">
+                <label>Date of Birth: &nbsp</label>
+                <input name="bday" type="text" placeholder="mm/dd/yyyy" required/>
+            </div>
+
+            <div class="formRow">
+               <label>Home Address: &nbsp</label>
+               <input name="appAddress" placeholder="Address" type="text" required/>
+               <input name="appAddress" placeholder="City" type="text" required/>
+               <input name="appAddress" placeholder="State" type="text" required/>
+               <input name="appAddress" placeholder="Zipcode" type="text" required/>
+            </div>
+
+            <div class="formRow">
+               <label>E-mail Address: &nbsp</label>
+               <input name="email" type="email" required/>
+            </div>
+
+            <div class="formRow">
+               <label>School Currently Attending: &nbsp</label>
+               <input name="school" type="text" list="elementary" required/>
+
+               <datalist id="elementary">
+                  <option value = "Bais Yaakov Lower East Side">
+                  <option value = "MDS">
+                  <option value = "Masores Bais Yaakov">
+                  <option value = "Prospect">
+                  <option value = "Shulamis">
+                  <option value = "TAG">
+                  <option value = "YNJ">
+                  <option value = "YSV">
+                  <option value = "Other">
+               </datalist>
+
+               <label>&nbsp Other: &nbsp</label>
+               <input name="school" type="text"/>
+            </div>
+
+            <div>
+                <label><br />Why do you want to attend MHS?</label>
+                <textarea name="why"></textarea>
+            </div>
+
+            <div>
+                <label><br />Enter your favorite subject and why:</label>
+                <textarea name="subject"></textarea>
+            </div>
+
+         </fieldset>
+
+          <div id="buttons">
+            <input type="submit" value="Submit My Application"/>
+            <input type="reset" value="Clear All"/>
+         </div>
+
+       </form>
+
+
+    <footer>
+        <hr />
+        Manhattan High School &#8226; 123 East 60th Street &#8226; New York, NY 11567 &#8226; 212-678-9876
+    </footer>
+
+</body>
+
+
+</html>

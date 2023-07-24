@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+body{
+   background-color: white;
+   box-shadow: rgb(51, 51, 51) 10px 0px 40px,  rgb(51, 51, 51) -10px 0px 40px;
+   border-left: 1px solid rgb(153, 0, 153);
+   border-right: 1px solid rgb(153, 0, 153);
+   height: 100%;
+   margin: 5px auto;
+   min-width: 320px;
+   max-width: 1200px;
+   width: 100%;
+   padding-left: 7px;
+   padding-right: 7px;
+}
+
+body#noPics{
+  background-image: url("../MHS Website Images/Buildings2.png");
+  height: 100%;
+  width: 98%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+img#logo{
+    width: 17em;
+    height: 10em;
+    horiz-align: left;
+    vertical-align: top;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+h1{
+    text-align: center;
+    font-size: 3em;
+}
+
+h2{
+    text-align: center;
+    font-size: 2.5em;
+}
+
+p{
+   font-size: large;
+   font-family: sans-serif;
+   line-height: 1.8em;
+   text-align: justify;
+}
+
+footer{
+    text-align: center;
+    margin-top: 5em;
+    font-size: 16.5px;
+}
+
+

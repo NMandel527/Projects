@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+table{
+    background: transparent;
+    border: 10px outset rgb(130, 60, 130);
+    font-size: 1.2em;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td{
+    border: 0.075em solid black;
+    padding: 5px;
+    vertical-align: center;
+}
+
+table caption{
+    caption-side: bottom;
+    text-align: center;
+}
+
+
+table thead{
+    background: rgb(130, 60, 130);
+    color: white;
+}
+
+table thead th{
+    height: 48px;
+    width: 4.5em;
+    font-size: 25px;
+    text-align: center;
+}
+
+table tbody tr{
+    height: 82px;
+    text-align: center;
+}
