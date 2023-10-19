@@ -1,46 +1,48 @@
 import java.util.*;
 
-public class RPN {
-    public static String evaluate(String expression) {
-        String[] exp = expression.split(" ");
+/**
+ * This program takes an RPN expression and returns the result as a double
+ * @source function takes a string as an argument
+ * @result evaluates and returns the result of the RPN expression
+ * @author Nicole Mandel
+ */
+
+public class RPN
+{
+    public static String evaluate(String expression)
+    {
+        String[] exp = expression.split("\\s+")  ;
         Stack<Double> rpn = new Stack<>();
-        double first;
-        double second;
-        for (String ix : exp) {
-            switch (ix) {
-                case "+" -> {
-                    first = rpn.pop();
-                    second = rpn.pop();
-                    rpn.push(first + second);
-                }
-                case "-" -> {
-                    first = rpn.pop();
-                    second = rpn.pop();
-                    rpn.push(second - first);
-                }
-                case "*" -> {
-                    first = rpn.pop();
-                    second = rpn.pop();
-                    rpn.push(first * second);
-                }
-                case "/" -> {
-                    first = rpn.pop();
-                    second = rpn.pop();
-                    rpn.push(second / first);
-                }
-                case "^" -> {
-                    first = rpn.pop();
-                    second = rpn.pop();
-                    rpn.push(Math.pow(first, second));
-                }
-                default -> {
-                    rpn.push(Double.parseDouble(ix));
-                }
+        for (String ix : exp)
+        {
+            if (ix.matches("[+\\-*/^]"))
+            {
+                double first = rpn.pop();
+                double second = rpn.pop();
+                double result = calculate(first, second, ix);
+                rpn.push(result);
+            }
+            else
+            {
+                rpn.push(Double.parseDouble(ix));
             }
         }
-            return rpn.pop().toString();
+        return rpn.pop().toString();
     }
 
+    private static double calculate(double first, double second, String operator)
+    {
+        double result = switch (operator)
+                {
+                    case "+" -> second + first;
+                    case "-" -> second - first;
+                    case "*" -> second * first;
+                    case "/" -> second / first;
+                    case "^" -> Math.pow(first, second);
+                    default -> Double.MIN_VALUE;
+                };
+        return result;
+    }
 }
 
 
